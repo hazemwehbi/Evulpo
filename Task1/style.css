@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: #636363;
+  text-align: center;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+      -webkit-transform: scale(0.85);
+       -moz-transform: scale(0.85);
+            transform: scale(0.85);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  height: 100vh;
+}
+
+.question {
+  font-weight: lighter;
+  font-size: 3rem;
+  text-align: center;
+}
+.unchosen {
+  transition: all 0.15s;
+  border-color: #ccc1c1;
+}
+.chosen {
+  transition: all 0.15s;
+  border-width: 66px;
+  border-color: #636363;
+  transform: scale(2);
+}
+.option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  height: 50px;
+  border-style: solid;
+  border-radius: 25px;
+  padding: 10px;
+  font-size: 0.9rem;
+  margin: 1rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.option:hover {
+  transform: scale(1.1);
+}
+
+#options-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button {
+  cursor: pointer;
+}
+#permanent-msg {
+  text-align: center;
+  font-weight: 900;
+  color: #277da1;
+}
+.feedback-container {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  border-radius: 40px 40px 0px 0px;
+  overflow: hidden;
+}
+
+.slideDown {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  transition: ease-out 0.5s;
+}
+
+.slideUp {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: green;
+  /* transition: ease-out 0.3s; */
+  transition: height ease-out 0.5s;
+}
+
+.slideUp.correct {
+  background-color: #43aa8b;
+}
+.slideUp.wrong {
+  background-color: #f94144;
+}
+
+#eval-msg {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.feedback-text {
+  padding-top: 15px;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+
+#eval-btn,
+#proceed-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 50px;
+  border-radius: 25px;
+  padding: 10px;
+  font-size: 0.9rem;
+  margin: 1rem;
+  text-align: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+#eval-btn:active,
+#proceed-btn:active {
+  transform: scale(0.9);
+}
+#proceed-btn {
+  background-color: #fff;
+  border: solid 3px #f9c74f;
+  color: #f9c74f;
+}
+#proceed-btn:hover {
+  background-color: #f9c74f;
+  border: #f9c74f;
+  color: #fff;
+}
+
+#eval-btn {
+  background-color: #fff;
+  border: solid 3px #277da1;
+  color: #277da1;
+}
+
+#eval-btn:hover {
+  background-color: #277da1;
+  border: #277da1;
+  color: #fff;
+}
+
+.container {
+  text-align: center;
+  margin-top: 40px;
+}
+.progress-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 30px;
+  max-width: 100%;
+  width: 90vw;
+}
+.progress-container::before {
+  content: "";
+  background-color: #f4a261;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100%;
+  z-index: -1;
+  transition: 0.4 ease;
+}
+.progress {
+  background-color: #277da1;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 0%;
+  z-index: -1;
+  transition: 0.4 ease;
+}
+
+.circle {
+  background-color: #fff;
+  color: #999;
+  border-radius: 20%;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #f4a261;
+  transition: 0.4s ease;
+}
+
+.circle.active {
+  border: 3px solid #277da1;
+}
+
+#final-result {
+  border: none;
+  height: 90vh;
+  width: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-result {
+  border: none;
+  border-radius: 50px;
+  background-color: #277da1;
+  padding: 50px;
+  font-size: 30px;
+  color: #fff;
+  margin-top: 50px;
+}
+.inner-result .score {
+  color: #fff;
+  font-size: 80px;
+}
+
+.restart {
+  background-color: #f4a261;
+  border-radius: 30px;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  transition: ease 0.2s;
+}
+
+.restart:active {
+  transform: scale(0.99);
+  transition: ease 0.2s;
+}

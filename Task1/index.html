@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Evulpo Test</title>
+	
+	<link rel="icon" href="./assests//images/evuplo_logo_rounded.png">
+	<meta name="description" content="exercise test full stack developer interview">
+	<meta name="keywords" content="single-choice exercise basic-data-connection">
+	<script src="main.js" type="text/javascript"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+
+	<audio id="positive-audio">
+		<source src="./assests/sounds/mission-success-41211.mp3" type="audio/wav">
+	</audio>
+	<audio id="negative-audio">
+		<source src="./assests/sounds/negative_beeps-6008.mp3" type="audio/wav">
+	</audio>
+	<audio id="next-audio">
+		<source src="./assests/sounds/going-to-the-next-level-114480.mp3" type="audio/wav">
+	</audio>
+	<audio id="final-audio">
+		<source src="./assests/sounds/feedback-sound-final1-81890.mp3" type="audio/wav">
+	</audio>
+	<div class="container">
+		<div class="progress-container">
+			<div class="progress" id="progress"></div>
+			<div id="prgs-1" class="circle active">1</div>
+			<div id="prgs-2" class="circle">2</div>
+			<div id="prgs-3" class="circle">3</div>
+			<div id="prgs-4" class="circle">4</div>
+			<div id="prgs-5" class="circle">5</div>
+			<div id="prgs-6" class="circle">6</div>
+			<div id="prgs-7" class="circle">7</div>
+			<div id="prgs-8" class="circle">8</div>
+			<div id="prgs-9" class="circle">9</div>
+		</div>
+	</div>
+	<div class="feedback-container">
+		<div class="feedback-item">
+			<div id="eval-msg"></div>
+			<p class="feedback-text"></p>
+		</div>
+	</div>
+	<div style="display: none;" id="final-result">
+		<div class="inner-result">Your Total score is<br><span class="score">35</span><br>
+			<div onclick="location.reload()" class='restart'>Click here to
+				retake
+				again!</div>
+		</div>
+	</div>
+	<div class="main">
+		<h2 id="permanent-msg">Please choose one option</h2>
+		<div class="quiz-container">
+			<p class="question"> Which is the correct option?</p>
+			<div id="options-wrapper">
+
+			</div>
+		</div>
+		<div class="button-container">
+			<button id="eval-btn" onclick="myEvaluation()">Evaluate</button>
+			<button id="proceed-btn" class="test">Next :)</button>
+		</div>
+	</div>
+
+
+
+
+	<script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()"
+		onreadystatechange="if (this.readyState === 'complete') this.onload()">
+		</script>
+
+</body>
+
+</html>
